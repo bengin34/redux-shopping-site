@@ -1,0 +1,33 @@
+@import "../../App.scss";
+
+.navbar{
+    padding: 1rem 0 0 0;
+    border-bottom: 1px solid rgba(0,0,0, 0.05);
+    &-brand{
+        font-size: 30px;
+        font-weight: 700;
+
+        @media screen and (max-width: 992px){
+            font-size:24px;
+        }
+        @media screen and (max-width: 576){
+            font-size:20px;
+        }
+    }
+    &-search{
+        align-items: stretch;
+        input{
+            width: 100%;
+            border: 0.7px solid rgba(0,0,0, 0.05);
+            color: &clr-light-blue;
+            height: 44px;
+            padding: 4px 16px;
+            border-radius: 3px 0 0 3px;
+        }
+        .navbar-search-btn{
+            width: 60px;
+            ;
+        }
+    }   
+
+}
