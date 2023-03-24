@@ -50,11 +50,15 @@ useEffect (() => {
               >
                 <i className="fas fa-times"> </i>
               </button>
-              <li>
-                <Link to="/" className="nav-link text-white">
-                  Demos
+             {
+              categories.map(category => (
+                <li key={category.id} >
+                <Link to={`/category/${category.id}`} className="nav-link text-white" onClick={() => setIsSidebarOpen(false)}>
+                 {category.name}
                 </Link>
               </li>
+              ))
+             }
             </ul>
             <button type="button" className="navbar-show-btn text-gold" onClick={() => setIsSidebarOpen(true)}>
               <i className="fas fa-bars"></i>
